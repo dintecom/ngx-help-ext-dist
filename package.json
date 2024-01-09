@@ -1,0 +1,29 @@
+{
+  "name": "@dintecom/ngx-help-ext",
+  "version": "2.2.2",
+  "author": "Dintecom",
+  "license": "MIT",
+  "keywords": [
+    "Angular",
+    "HelpExt"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^11.0.0",
+    "@angular/core": "^11.0.0",
+    "@angular/animations": "^11.0.0",
+    "@angular/platform-browser": "^11.0.0",
+    "@angular/router": "^11.0.0",
+    "@angular/cdk": "^11.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/dintecom-ngx-help-ext.umd.js",
+  "module": "fesm2015/dintecom-ngx-help-ext.js",
+  "es2015": "fesm2015/dintecom-ngx-help-ext.js",
+  "esm2015": "esm2015/dintecom-ngx-help-ext.js",
+  "fesm2015": "fesm2015/dintecom-ngx-help-ext.js",
+  "typings": "dintecom-ngx-help-ext.d.ts",
+  "metadata": "dintecom-ngx-help-ext.metadata.json",
+  "sideEffects": false
+}

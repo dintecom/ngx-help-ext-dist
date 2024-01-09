@@ -1,0 +1,21 @@
+@import "../variables";
+@import "help-ext-theme";
+
+@mixin mat-help-ext-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $is-dark-theme: map-get($theme, is-dark);
+  $help-ext-background: if($is-dark-theme, $help-ext-dark-theme-background, $help-ext-light-theme-background);
+  $help-ext-foreground: if($is-dark-theme, $help-ext-dark-theme-foreground, $help-ext-light-theme-foreground);
+
+  @include help-ext-theme(
+    $icon-color: map-get($help-ext-foreground, icon),
+    $link-color: map-get($help-ext-foreground, link),
+    $caption-color: map-get($help-ext-foreground, caption),
+    $border-color: map-get($help-ext-foreground, border),
+    $code-background-color: map-get($help-ext-background, code),
+    $flyout-color: mat-color($foreground, text),
+    $flyout-background-color: mat-color($background, dialog),
+    $flyout-box-shadow: map-get($help-ext-background, shadow)
+  );
+}

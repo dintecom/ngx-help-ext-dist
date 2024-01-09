@@ -1,0 +1,31 @@
+@import "help-ext-content-theme";
+
+@mixin help-ext-theme(
+  $icon-color,
+  $link-color,
+  $caption-color,
+  $border-color,
+  $code-background-color,
+  $flyout-color,
+  $flyout-background-color,
+  $flyout-box-shadow
+) {
+  .help-ext-icon {
+    color: $icon-color;
+  }
+
+  .help-ext-flyout {
+    color: $flyout-color;
+    box-shadow: $flyout-box-shadow;
+    background-color: $flyout-background-color;
+  }
+
+  .help-ext-flyout-content {
+    @include help-ext-content-theme(
+      $link-color: $link-color,
+      $caption-color: $caption-color,
+      $border-color: $border-color,
+      $code-background-color: $code-background-color
+    );
+  }
+}

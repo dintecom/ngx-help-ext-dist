@@ -1,0 +1,39 @@
+$help-ext-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  "Helvetica Neue", sans-serif !default;
+$help-ext-flyout-padding: 16px !default;
+
+$help-ext-light-theme-background: (
+  code: #6d737b,
+  background: #f9f9f9,
+  shadow: (
+    0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%),
+  ),
+);
+
+$help-ext-dark-theme-background: (
+  code: #e8e8e8,
+  background: #2f3742,
+  shadow: (
+    0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%),
+  ),
+);
+
+$help-ext-light-theme-foreground: (
+  text: black,
+  icon: #1976d2,
+  link: -webkit-link,
+  caption: #8a8f97,
+  border: #6d737b,
+);
+
+$help-ext-dark-theme-foreground: (
+  text: #dfe0e4,
+  icon: #1976d2,
+  link: #4099ff,
+  caption: #999,
+  border: #ccc,
+);

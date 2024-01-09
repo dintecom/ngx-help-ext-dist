@@ -1,0 +1,82 @@
+@import "variables";
+@import "./mixins/help-ext-content";
+
+.help-ext {
+  display: flex;
+}
+
+.help-ext-icon {
+  cursor: help;
+  fill: currentColor;
+
+  &.disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}
+
+.help-ext-flyout {
+  pointer-events: all;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-ext-flyout-content {
+  overflow-y: auto;
+  padding: $help-ext-flyout-padding;
+
+  font-size: 16px;
+  overflow-wrap: break-word;
+
+  *:not(img) {
+    all: revert;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  @include help-ext-content();
+}
+
+.help-ext-flyout-attachments {
+  padding: 0 $help-ext-flyout-padding $help-ext-flyout-padding $help-ext-flyout-padding;
+  font-family: $help-ext-font-family;
+  line-height: 1.4;
+  font-size: 14px;
+
+  & > * {
+    all: revert;
+  }
+}
+
+.help-ext-flyout-attachments-title {
+  margin: 0 0 0.6em 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.help-ext-flyout-attachment {
+  display: flex;
+  align-items: center;
+}
+
+.help-ext-flyout-attachment + .help-ext-flyout-attachment {
+  margin-top: 4px;
+}
+
+.help-ext-flyout-attachment-icon {
+  margin-right: 6px;
+  fill: currentColor;
+}
+
+.help-ext-panel {
+  pointer-events: none;
+}

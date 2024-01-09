@@ -1,0 +1,39 @@
+@import "../variables";
+
+@mixin help-ext-content-theme($link-color, $caption-color, $border-color, $code-background-color) {
+  a {
+    color: $link-color;
+  }
+
+  table {
+    /* Set default table styles if a table has a positive border attribute and no inline css */
+    &[border]:not([border="0"]):not([style*="border-color"]) {
+      th,
+      td {
+        border-color: $border-color;
+      }
+    }
+  }
+
+  figure {
+    figcaption {
+      color: $caption-color;
+    }
+  }
+
+  hr {
+    border-color: $border-color;
+  }
+
+  code {
+    background-color: $code-background-color;
+  }
+
+  .mce-content-body:not([dir="rtl"]) blockquote {
+    border-left-color: $border-color;
+  }
+
+  .mce-content-body[dir="rtl"] blockquote {
+    border-right-color: $border-color;
+  }
+}
