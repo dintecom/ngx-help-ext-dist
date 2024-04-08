@@ -4,7 +4,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { HelpExtHttpHeaders, HelpExtUrlResolver } from '../help-ext.config';
 import { Article } from './article';
-import * as ɵngcc0 from '@angular/core';
 export declare const cacheLifetimeSecondDefault: number;
 export declare class HelpExtService {
     private readonly _http;
@@ -25,8 +24,4 @@ export declare class HelpExtService {
     sanitizeContent(content: string): string;
     makeAbsoluteLinks(element: Element | ElementRef, baseAddress: string, linkTarget?: string): void;
     private cachedGet;
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<HelpExtService, never>;
-    static ɵprov: ɵngcc0.ɵɵInjectableDef<HelpExtService>;
 }
-
-//# sourceMappingURL=help-ext.service.d.ts.map

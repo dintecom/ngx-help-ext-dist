@@ -1662,6 +1662,7 @@
                 _this._flyoutInstance.mouseEnter.subscribe(function () { return _this.show(FLYOUT_SHOW_HIDE_DELAY); });
                 _this._flyoutInstance.mouseLeave.subscribe(function () { return _this.hide(FLYOUT_SHOW_HIDE_DELAY); });
                 _this._flyoutInstance.show();
+                setTimeout(function () { return _this._overlayRef.updatePosition(); });
                 _this._showTimeoutId = undefined;
             }, delay);
         };
@@ -1683,7 +1684,7 @@
         HelpExtComponent.prototype.ngOnInit = function () {
             this._portal = new portal.ComponentPortal(HelpExtFlyoutComponent);
             var positionStrategy = new FlexibleConnectedPositionStrategy17(this._helpQuestionElement, this._viewportRuler, this._document, this._platform, this._overlayContainer)
-                .withFlexibleDimensions(true)
+                .withFlexibleDimensions(false)
                 .withGrowAfterOpen(true)
                 .withPush(true)
                 .withPositions([

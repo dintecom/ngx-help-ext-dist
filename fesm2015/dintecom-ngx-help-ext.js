@@ -1292,6 +1292,7 @@ class HelpExtComponent {
             this._flyoutInstance.mouseEnter.subscribe(() => this.show(FLYOUT_SHOW_HIDE_DELAY));
             this._flyoutInstance.mouseLeave.subscribe(() => this.hide(FLYOUT_SHOW_HIDE_DELAY));
             this._flyoutInstance.show();
+            setTimeout(() => this._overlayRef.updatePosition());
             this._showTimeoutId = undefined;
         }, delay);
     }
@@ -1312,7 +1313,7 @@ class HelpExtComponent {
     ngOnInit() {
         this._portal = new ComponentPortal(HelpExtFlyoutComponent);
         const positionStrategy = new FlexibleConnectedPositionStrategy17(this._helpQuestionElement, this._viewportRuler, this._document, this._platform, this._overlayContainer)
-            .withFlexibleDimensions(true)
+            .withFlexibleDimensions(false)
             .withGrowAfterOpen(true)
             .withPush(true)
             .withPositions([

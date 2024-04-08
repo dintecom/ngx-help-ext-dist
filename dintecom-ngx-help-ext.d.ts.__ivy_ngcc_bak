@@ -8,5 +8,3 @@ export { HelpExtArticleContentComponent as ɵd } from './lib/help-ext-article-co
 export { HelpExtAttachmentComponent as ɵe } from './lib/help-ext-attachment/help-ext-attachment.component';
 export { helpExtFlyoutAnimations as ɵc } from './lib/help-ext-flyout/help-ext-flyout-animations';
 export { HelpExtFlyoutComponent as ɵb } from './lib/help-ext-flyout/help-ext-flyout.component';
-
-//# sourceMappingURL=dintecom-ngx-help-ext.d.ts.map

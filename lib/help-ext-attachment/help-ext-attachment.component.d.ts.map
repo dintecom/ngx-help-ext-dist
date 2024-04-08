@@ -1,0 +1,1 @@
+{"version":3,"file":"help-ext-attachment.component.d.ts","sources":["help-ext-attachment.component.d.ts"],"names":[],"mappings":"AAAA;;AACA;AACA;;;AACA","sourcesContent":["import { Attachment } from '../api/attachment';\r\nexport declare class HelpExtAttachmentComponent {\r\n    attachment: Attachment;\r\n}\r\n"]}
